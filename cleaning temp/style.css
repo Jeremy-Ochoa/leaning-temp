@@ -1,0 +1,539 @@
+/* -------------------------
+   Global Styles & Variables
+-------------------------- */
+:root {
+  --color-bg: #f7f3ec;
+  --color-surface: #ffffff;
+  --color-accent: #6aa492;
+  --color-accent-soft: #e1f0ea;
+  --color-text-main: #1f2933;
+  --color-text-muted: #6b7280;
+  --color-border: #e5e7eb;
+  --shadow-soft: 0 10px 25px rgba(15, 23, 42, 0.08);
+  --radius-lg: 18px;
+  --radius-full: 999px;
+  --max-width: 1080px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text-main);
+  line-height: 1.6;
+}
+
+/* Layout helpers */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 4.5rem 0;
+}
+
+.section--light {
+  background: var(--color-bg);
+}
+
+.section--surface {
+  background: var(--color-surface);
+}
+
+/* -------------------------
+   Header / Navigation
+-------------------------- */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  backdrop-filter: blur(16px);
+  background: rgba(247, 243, 236, 0.92);
+  border-bottom: 1px solid rgba(209, 213, 219, 0.8);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.nav__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.nav__brand-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  background: var(--color-accent-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: var(--color-accent);
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  font-size: 0.95rem;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.nav__link:hover,
+.nav__link--active {
+  color: var(--color-accent);
+}
+
+.nav__cta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav__phone {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.nav__phone strong {
+  color: var(--color-text-main);
+}
+
+/* -------------------------
+   Buttons
+-------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.4rem;
+  border-radius: var(--radius-full);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.btn--primary {
+  background: var(--color-accent);
+  color: #fff;
+  box-shadow: var(--shadow-soft);
+}
+
+.btn--primary:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--color-accent);
+  border: 1px solid rgba(148, 163, 184, 0.6);
+}
+
+.btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* -------------------------
+   Hero Section
+-------------------------- */
+.hero {
+  padding: 3.5rem 0 4.5rem;
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: var(--radius-full);
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.hero__title {
+  margin: 1rem 0 0.75rem;
+  font-size: 2.4rem;
+  line-height: 1.1;
+}
+
+.hero__subtitle {
+  margin-bottom: 1.5rem;
+  color: var(--color-text-muted);
+  max-width: 32rem;
+}
+
+.hero__highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.hero__pill {
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(229, 231, 235, 0.9);
+  color: var(--color-text-muted);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.hero__note {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.hero__image-card {
+  background: var(--color-surface);
+  border-radius: 28px;
+  padding: 1.25rem;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(229, 231, 235, 0.9);
+}
+
+.hero__image-main {
+  border-radius: 22px;
+  overflow: hidden;
+  height: 260px;
+  background: url("images/cleaning-hero.jpg") center/cover no-repeat;
+  margin-bottom: 1rem;
+}
+
+.hero__stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.85rem;
+}
+
+.hero__stat-label {
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.hero__stat-value {
+  font-weight: 700;
+}
+
+/* -------------------------
+   Section Headings
+-------------------------- */
+.section-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.section-header__eyebrow {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  letter-spacing: 0.12em;
+  font-weight: 600;
+}
+
+.section-header__title {
+  margin: 0.75rem 0 0.4rem;
+  font-size: 1.8rem;
+}
+
+.section-header__subtitle {
+  margin: 0;
+  color: var(--color-text-muted);
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.95rem;
+}
+
+/* -------------------------
+   Services Grid
+-------------------------- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.75rem;
+}
+
+.service-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 1.4rem 1.5rem 1.5rem;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(229, 231, 235, 0.9);
+}
+
+.service-card__icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 14px;
+  background: var(--color-accent-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.9rem;
+  font-size: 1.1rem;
+}
+
+.service-card__title {
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+}
+
+.service-card__text {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+/* -------------------------
+   Split Section (About / CTA)
+-------------------------- */
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.split__image {
+  border-radius: 24px;
+  overflow: hidden;
+  height: 260px;
+  background: url("images/cleaning-team.jpg") center/cover no-repeat;
+}
+
+.list-check {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+.list-check li {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.4rem;
+}
+
+.list-check span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  font-size: 0.78rem;
+}
+
+/* -------------------------
+   Testimonials Strip
+-------------------------- */
+.testimonial-strip {
+  background: var(--color-accent-soft);
+  border-radius: 24px;
+  padding: 1.4rem 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.testimonial-strip__quote {
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+.testimonial-strip__author {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+/* -------------------------
+   Gallery
+-------------------------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.gallery-item {
+  border-radius: 18px;
+  overflow: hidden;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* -------------------------
+   Contact / Form
+-------------------------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 2.5rem;
+}
+
+.form-card {
+  background: var(--color-surface);
+  border-radius: 22px;
+  padding: 1.7rem 1.6rem;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(229, 231, 235, 0.9);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.form-grid--single {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.input,
+.textarea,
+.select {
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+.textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* -------------------------
+   Footer
+-------------------------- */
+.footer {
+  border-top: 1px solid rgba(209, 213, 219, 0.7);
+  padding: 2rem 0 2.5rem;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* -------------------------
+   Utility
+-------------------------- */
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.badge-soft {
+  display: inline-flex;
+  padding: 0.4rem 0.7rem;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+/* -------------------------
+   Responsive
+-------------------------- */
+@media (max-width: 880px) {
+  .hero__inner,
+  .split,
+  .contact-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .services-grid,
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .nav__links {
+    display: none; /* simple mobile version for now */
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding-top: 2.5rem;
+  }
+
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .services-grid,
+  .gallery-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .form-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

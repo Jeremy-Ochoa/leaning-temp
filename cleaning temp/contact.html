@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | BUSINESS_NAME – Request a Quote</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact BUSINESS_NAME for a free cleaning quote in CITY. Fast responses and flexible scheduling.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <a href="index.html" class="nav__brand">
+      <div class="nav__brand-mark">B</div>
+      <span>BUSINESS_NAME</span>
+    </a>
+    <nav class="nav__links">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="services.html" class="nav__link">Services</a>
+      <a href="gallery.html" class="nav__link">Gallery</a>
+      <a href="about.html" class="nav__link">About</a>
+      <a href="contact.html" class="nav__link nav__link--active">Contact</a>
+    </nav>
+    <div class="nav__cta">
+      <div class="nav__phone">Call us:<br><strong>PHONE_NUMBER</strong></div>
+      <a href="tel:PHONE_NUMBER" class="btn btn--primary">Call Now</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section section--light">
+    <div class="container contact-grid">
+      <div>
+        <header class="section-header" style="text-align:left;margin-bottom:1.5rem;">
+          <p class="section-header__eyebrow">Contact</p>
+          <h1 class="section-header__title">Tell Us About Your Space</h1>
+        </header>
+        <p class="text-muted">
+          Fill out this form or call <strong>PHONE_NUMBER</strong> and we’ll follow up with a quote and available dates.
+        </p>
+        <p class="text-muted">
+          <strong>Service Area:</strong> CITY, NEARBY_AREA, and surrounding communities.
+        </p>
+
+        <div style="margin-top:1.5rem;">
+          <h3>Business Hours</h3>
+          <p class="text-muted" style="margin:0;">
+            Monday – Friday: 8:00am – 6:00pm<br>
+            Saturday: By appointment · Sunday: Closed
+          </p>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <form>
+          <div class="form-grid">
+            <div>
+              <label class="label" for="name2">Name</label>
+              <input class="input" id="name2" type="text" placeholder="Full name">
+            </div>
+            <div>
+              <label class="label" for="email2">Email</label>
+              <input class="input" id="email2" type="email" placeholder="EMAIL_ADDRESS">
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div>
+              <label class="label" for="phone2">Phone</label>
+              <input class="input" id="phone2" type="tel" placeholder="PHONE_NUMBER">
+            </div>
+            <div>
+              <label class="label" for="city">City / Area</label>
+              <input class="input" id="city" type="text" placeholder="CITY or neighborhood">
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div>
+              <label class="label" for="service2">Service Type</label>
+              <select class="select" id="service2">
+                <option>Recurring Home Cleaning</option>
+                <option>One-Time / Deep Clean</option>
+                <option>Move-In / Move-Out</option>
+                <option>Office / Commercial</option>
+              </select>
+            </div>
+            <div>
+              <label class="label" for="frequency">How Often</label>
+              <select class="select" id="frequency">
+                <option>One time</option>
+                <option>Weekly</option>
+                <option>Every 2 weeks</option>
+                <option>Monthly</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-grid form-grid--single">
+            <div>
+              <label class="label" for="details">Details</label>
+              <textarea class="textarea" id="details" placeholder="Sq. footage, beds/baths, pets, special requests..."></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn--primary" style="margin-top:0.5rem;">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div>© YEAR BUSINESS_NAME · CITY, STATE</div>
+    <div>Email <strong>EMAIL_ADDRESS</strong></div>
+  </div>
+</footer>
+</body>
+</html>
